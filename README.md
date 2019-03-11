@@ -40,7 +40,7 @@ return array(
 <h4>Comment créer une nouvelle route ?</h4>
 <p>Toutes les routes doivent être définie dans le fichier /config/routes.php
 
-<pre><code>'index.php?page=nameofpage&id=.'$id </code>
+<pre><code>'index.php?page=nameofpage&id=.'$id </code></pre>
 
 <h2>Controller</h2> => /app/Controller
 
@@ -102,7 +102,7 @@ public function demo()
 
 	//retourne une erreur 404
 	$this->Abort404();	
-}</code>
+}</code></pre>
 <h2>Model</h2> => /app/Model
 
 <h3>À quoi servent les modèles ?</h3>
@@ -137,7 +137,7 @@ public function all()
 public function findById($id)
 public function findByColumn($column,$value)
 public function delete($id)
-</code>
+</code></pre>
 
 <h2>View</h2> => /view
 
