@@ -16,7 +16,7 @@
 
 <p>MVC4 est livré avec un fichier nommé config/config.dist.php. Ce fichier est destiné à être versionné, et ne doit pas contenir d'informations personnelles ou sensibles. Le fichier lu par défaut par le framework est <span class="code">app/config.php</span>, qui lui, ne doit pas être versionné, il vous est personnel.</p>
 
-<p>Pour démarrer copier-coller y le contenu du fichier config/config.dist.php.
+<p>Pour démarrer copier-coller le contenu du fichier config/config.dist.php dans 
 
 <pre><code>/* config/config.php */
 
