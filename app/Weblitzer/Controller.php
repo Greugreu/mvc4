@@ -52,6 +52,23 @@ class Controller
         echo '</pre>';
     }
 
+    /**
+     * Retourne une réponse JSON au client
+     * @param mixed $data Les données à retourner
+     * @return les données au format json
+     */
+    protected function showJson($data)
+    {
+        header('Content-type: application/json');
+        $json = json_encode($data, JSON_PRETTY_PRINT);
+        if($json){
+            die($json);
+        }
+        else {
+            die('Error in json encoding');
+        }
+    }
+
     protected function cleanXss($post){
         foreach($post as $k=>$v) {
             $post[$k]=trim(strip_tags($v)); //protection 1 XSS
