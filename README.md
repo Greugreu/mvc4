@@ -1,4 +1,4 @@
-<h1>Framework MVC4</h1>
+<h1>Framework Pédagogique MVC4</h1>
 
 <h2>Installation</h2>
 <h3>Prérequis</h3>
@@ -21,12 +21,12 @@
 <pre><code>/* config/config.php */
 
 return array(
-    'db_name'   => 'test2',
+    'db_name'   => 'dbname',
     'db_user'   => 'root',
-    'db_pass'   => 'root',
+    'db_pass'   => '',
     'db_host'   => 'localhost',
 
-    'directory' => '/2019/vue/mvc4/view/'
+    'directory' => '/chemin/'
 );
 </code></pre>
 <h3>Controlleur Frontal</h3> => /public/index.php
@@ -35,7 +35,7 @@ return array(
 
 <h4>À quoi servent les routes ?</h4>
 <p>Les routes permettent d'associer simplement des URL virtuelles à des pages spécifiques de votre site.
- Plus précisémment, elles vous permettent d'exécuter une méthode de contrôleur que vous avez choisie
+ Plus précisémment, elles vous permettent d'**exécuter une méthode de contrôleur** que vous avez choisie
 
 <h4>Comment créer une nouvelle route ?</h4>
 <p>Toutes les routes doivent être définie dans le fichier /config/routes.php
@@ -73,16 +73,16 @@ de pages d'erreurs et de JSON.</p>
  afin de "classer" vos méthodes, qui deviendront rapidement nombreuses.</p>
 <p>Ces méthodes doivent être de visibilité <span class="code">public</span>, 
 et devrait normalement se terminer par l'une des actions suivantes : 
-app/Controller/DefaultController.php </p>
+ </p>
 <pre><code>
-public function demo()
+/* app/Controller/DefaultController.php */
+public function index()
 {
 	//autre logique ici, puis...
-
 	/** 
 	 * Méthodes habituellement utilisées en fin de traitement du contrôleur 
 	 */
-
+	 
 	//affiche un template
 	$this->render('app.default.contact');
 
