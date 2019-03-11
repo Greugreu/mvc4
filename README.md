@@ -28,7 +28,7 @@ return array(
 
     'directory' => '/2019/vue/mvc4/view/'
 );
-</code>
+</code></pre>
 <h3>Controlleur Frontal</h3> => /public/index.php
 
 <h2>Routes</h2> => /config/routes.php
