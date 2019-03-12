@@ -18,8 +18,8 @@ class Controller
         ob_start();
         extract($variable);
         require $this->getViewPath().str_replace('.','/',$view).'.php';
-        $content = ob_get_clean();
         $view = new View();
+        $content = ob_get_clean();
         require $this->getViewPath().'layout/'.$this->layout.'.php';
     }
 
