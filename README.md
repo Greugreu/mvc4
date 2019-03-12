@@ -90,8 +90,8 @@ public function index()
 	//template disponible dans le dossier view/app/default/contact.php
 	$this->render('app.default.contact',['username' => 'michel']);
 
-        //redirige vers une page du site
-        $this->redirect('index.php?page=contact');
+    //redirige vers une page du site
+    $this->redirect('index.php?page=contact');
 
 	//redirige vers un site externe
 	$this->redirect('https://weblitzer.com');
@@ -101,8 +101,9 @@ public function index()
 	$this->showJson($data);
 
 	//retourne une erreur 404
-	$this->Abort404();	
-}</code></pre>
+	$this->Abort404();
+}
+</code></pre>
 <h2>Model</h2> => /app/Model
 
 <h3>À quoi servent les modèles ?</h3>
