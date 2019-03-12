@@ -10,7 +10,7 @@
 
 <h3>Configurations</h3>
 
-<p>Par sa simplicité, MVC4 ne requière pas tellement de configuration pour fonctionner.</p>
+<p>Par sa simplicité, MVC4 requière peu de configuration pour fonctionner.</p>
 
 <h3>Le fichier de configuration</h3>
 
@@ -35,7 +35,7 @@ return array(
 
 <h4>À quoi servent les routes ?</h4>
 <p>Les routes permettent d'associer simplement des URL virtuelles à des pages spécifiques de votre site.
- Plus précisémment, elles vous permettent d'**exécuter une méthode de contrôleur** que vous avez choisie
+ Plus précisémment, elles vous permettent d'exécuter une méthode de contrôleur que vous avez choisie
 
 <h4>Comment créer une nouvelle route ?</h4>
 <p>Toutes les routes doivent être définie dans le fichier /config/routes.php
@@ -115,11 +115,12 @@ public function index()
 <p>Par exemple, pour créer un modèle relié à une table fictive de commentaires nommées <span class="code">comment</span> : </p>
 <pre><code>&lt;?php /* app/Model/CommentModel.php */
 namespace App\Model;
-
 class CommentModel extends \App\Weblitzer\Model 
 {
-        protected static $table = 'comments';
-     
+    protected static $table = 'comments';
+    protected $comment;
+    protected $created_at;
+    protected $status;
 	//Récupère les commentaires associés à un article
 	public function findPostComments($postId)
 	{
