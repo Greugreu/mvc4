@@ -14,9 +14,9 @@
 
 <h3>Le fichier de configuration</h3>
 
-<p>MVC4 est livré avec un fichier nommé config/config.dist.php. Ce fichier est destiné à être versionné, et ne doit pas contenir d'informations personnelles ou sensibles. Le fichier lu par défaut par le framework est <span class="code">app/config.php</span>, qui lui, ne doit pas être versionné, il vous est personnel.</p>
+<p>MVC4 est livré avec un fichier nommé config/config-dist.php. Ce fichier est destiné à être versionné, et ne doit pas contenir d'informations personnelles ou sensibles. Le fichier lu par défaut par le framework est <span class="code">config/config.php</span>, qui lui, ne doit pas être versionné, il vous est personnel.</p>
 
-<p>Pour démarrer copier-coller le contenu du fichier config/config.dist.php dans 
+<p>Pour démarrer copier-coller le contenu du fichier config/config-dist.php dans 
 
 <pre><code>/* config/config.php */
 
@@ -26,11 +26,11 @@ return array(
     'db_pass'   => '',
     'db_host'   => 'localhost',
 
-    'directory' => '/chemin/'
+    'directory' => '/chemin/to/view/'
 );
 </code></pre>
 <h3>Controlleur Frontal</h3> => /public/index.php
-
+Pour afficher le site aller via localhost dans le dossier public de votre application
 <h2>Routes</h2> => /config/routes.php
 
 <h4>À quoi servent les routes ?</h4>
