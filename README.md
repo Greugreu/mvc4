@@ -179,3 +179,10 @@ On pourra enlever un emprunt de la liste en donnant une date à date_end
 <p>Afficher le nombre d’emprunts total.</p>
 <p>Afficher le nombre d’emprunts en cours.(date_end IS NULL)</p>
 
+------------------------------------------------------
+
+<h4>Bonus</h4>
+
+- Gestion des catégories de produits.
+- Pagination numérotée des listings des abonnés et des produits.
+- Gestion d'un formulaire au choix à l'aide d'Ajax.
