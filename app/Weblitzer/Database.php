@@ -56,6 +56,13 @@ class Database {
         return $query->fetchAll(PDO::FETCH_CLASS,$className);
     }
 
+    public function aggregation($sql)
+    {
+        $query = $this->getPdo()->prepare($sql);
+        $query->execute();
+        return $query->fetchColumn();
+    }
+
     public function prepare($sql,$bind,$className,$one = false)
     {
         $query = $this->getPdo()->prepare($sql);
