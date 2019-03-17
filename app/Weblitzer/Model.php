@@ -27,9 +27,9 @@ class Model
         return App::getDatabase()->query("SELECT * FROM ".self::getTable(),get_called_class());
     }
 
-    public static function findById($id)
+    public static function findById($id,$columId = 'id')
     {
-        return App::getDatabase()->prepare("SELECT * FROM " . self::getTable() . " WHERE id = ?",[$id],get_called_class(),true);
+        return App::getDatabase()->prepare("SELECT * FROM " . self::getTable() . " WHERE ".$columId." = ?",[$id],get_called_class(),true);
     }
 
     public static function findByColumn($column,$value)
@@ -37,9 +37,9 @@ class Model
         return App::getDatabase()->prepare("SELECT * FROM " . self::getTable() . " WHERE ".$column." = ?",[$value],get_called_class(),true);
     }
 
-    public static function delete($id)
+    public static function delete($id,$columId = 'id')
     {
-        return App::getDatabase()->prepareInsert("DELETE FROM " . self::getTable() . " WHERE id = ?",[$id],get_called_class(),true);
+        return App::getDatabase()->prepareInsert("DELETE FROM " . self::getTable() . " WHERE ".$columId." = ?",[$id],get_called_class(),true);
     }
 
     public function __get($key)

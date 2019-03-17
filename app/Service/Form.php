@@ -97,11 +97,11 @@ class Form
      * @param $column
      * @return string
      */
-    public function select($name, $entitys, $column)
+    public function select($name, $entitys, $column, $idd = 'id')
     {
         $html = '<select name="'.$name.'">';
         foreach ($entitys as $entity) {
-            $html .= '<option value="'.$entity->id.'">'.$entity->$column.'</option>';
+            $html .= '<option value="'.$entity->$idd.'">'.$entity->$column.'</option>';
         }
         $html .= '</select>';
         return $html;
